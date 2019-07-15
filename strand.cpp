@@ -64,8 +64,8 @@ strand::strand(unsigned long long size, string type_, map<string, string> codon_
         sequence.push_back(bases[3 - rd() % 2]);
     ++base_counts[sequence.back()];
     string temp;    // Hold temporary substring of previous 3 bases to determine codon
-    for (unsigned long long i = 3; i <= size; ++i)  // Enter loop since no codons possible with 2 bases
-    {
+    for (unsigned long long i = 3; i <= size; ++i)  // Enter loop after first two insertions 
+    {                                               // since no codons possible with 2 bases
         if (rd() % 100 < 50)
             sequence.push_back(bases[rd() % 2]);
         else
