@@ -10,4 +10,4 @@ To run a small driver program: place all the files in the same directory, and bu
     
 Then execute with an integer argument for the size of the DNA strand:
 
-    ./a.out $size$
+    ./a.out <size>
